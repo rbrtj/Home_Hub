@@ -1,44 +1,21 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
-import { PropertyCardComponent } from "../property-card/property-card.component";
+import { Component, OnInit } from '@angular/core';
+import { PropertyCardComponent } from '../property-card/property-card.component';
+import { HousingService } from '../services/housing.service';
 
 @Component({
-    selector: 'app-property-list',
-    templateUrl: './property-list.component.html',
-    standalone: true,
-    imports: [NgFor, PropertyCardComponent]
+  selector: 'app-property-list',
+  templateUrl: './property-list.component.html',
+  standalone: true,
+  imports: [NgFor, PropertyCardComponent],
 })
-export class PropertyListComponent {
-  properties = [
-    {
-      id: 1,
-      name: 'Empire State Building',
-      type: 'office',
-      price: 120000,
-    },
-    {
-      id: 2,
-      name: 'Some nice building',
-      type: 'house',
-      price: 120000,
-    },
-    {
-      id: 3,
-      name: 'Empire State Building',
-      type: 'office',
-      price: 120000,
-    },
-    {
-      id: 1,
-      name: 'Empire State Building',
-      type: 'office',
-      price: 120000,
-    },
-    {
-      id: 1,
-      name: 'Empire State Building',
-      type: 'office',
-      price: 120000,
-    },
-  ];
+export class PropertyListComponent implements OnInit {
+  properties: any = [];
+  constructor(private housingService: HousingService) {}
+
+  ngOnInit(): void {
+    this.housingService.getAllProperties().subscribe((res) => {
+      this.properties = res;
+    });
+  }
 }
