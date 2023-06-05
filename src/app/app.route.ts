@@ -7,4 +7,5 @@ export const APP_ROUTE: Route[] = [
   { path: 'add-property', component: AddPropertyComponent },
   { path: 'rent-property', component: PropertyListComponent },
   { path: 'property-detail/:id', component: PropertyDetailComponent },
+  { path: '**', component: PropertyListComponent },
 ];

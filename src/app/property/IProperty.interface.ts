@@ -4,4 +4,5 @@ export interface IProperty {
   type: string;
   price: number;
   description: string;
+  sellRent: number;
 }
