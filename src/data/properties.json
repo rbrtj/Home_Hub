@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Empire State Building",
+    "sellRent": 1,
+    "type": "office",
+    "price": 120000
+  },
+  {
+    "id": 2,
+    "name": "Some nice building",
+    "sellRent": 1,
+    "type": "house",
+    "price": 120000
+  },
+  {
+    "id": 3,
+    "name": "Empire State Building",
+    "sellRent": 1,
+    "type": "office",
+    "price": 120000
+  },
+  {
+    "id": 4,
+    "name": "Empire State Building",
+    "sellRent": 2,
+    "type": "office",
+    "price": 120000
+  },
+  {
+    "id": 5,
+    "name": "Empire State Building",
+    "sellRent": 2,
+    "type": "office",
+    "price": 120000
+  }
+]

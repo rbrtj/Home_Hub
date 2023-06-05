@@ -1,0 +1,26 @@
+<mat-toolbar>
+  <div>
+    <a href="/">HomeHub</a>
+  </div>
+  <div class="ml-20 flex gap-8">
+    <a
+      routerLink="/"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      class="navigation-button"
+      >Buy</a
+    >
+    <a
+      routerLink="rent-property"
+      routerLinkActive="active"
+      class="navigation-button"
+      >Rent</a
+    >
+    <a
+      routerLink="add-property"
+      routerLinkActive="active"
+      class="navigation-button"
+      >List property</a
+    >
+  </div>
+</mat-toolbar>
